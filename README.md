@@ -1,24 +1,7 @@
-simple-resume-cv
-================
+My Resume
+=============
 
-Template for a simple resume or curriculum vitae (CV), in XeLaTeX.
-
-**Compiled sample document:**<br>
-[CV.pdf](https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/CV.pdf)
-
-**Sample pages (click to enlarge):**
-
-<img height="500" src="https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/Miscellaneous/CV-01.png" alt="CV-01">
-<img height="500" src="https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/Miscellaneous/CV-02.png" alt="CV-02">
-<img height="500" src="https://raw.githubusercontent.com/zachscrivena/simple-resume-cv/master/Miscellaneous/CV-03.png" alt="CV-03">
-
-## Main Features
-
-- Simple template that can be further customized or extended.
-- Template document contains numerous examples.
-- Direct support for TrueType (TTF) and OpenType (OTF) fonts.
-- Direct support for multilingual Unicode characters, with the appropriate fonts.
-- Hyperlinks can be included in generated PDF.
+Latex formatted resume using Zach Scrivena's Template, found [here](https://githubt.com/zachscrivena/simple-resume-cv/)
 
 ## Overview
 
