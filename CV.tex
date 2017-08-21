@@ -1,0 +1,323 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% -*- coding: UTF-8; -*-
+% vim: set fenc=utf-8
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% SIMPLE-RESUME-CV
+%% <https://github.com/zachscrivena/simple-resume-cv>
+%% This is free and unencumbered software released into the
+%% public domain; see <http://unlicense.org> for details.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% See "README.md" for instructions on compiling this document.
+
+\documentclass[letterpaper,MMMyyyy,nonstopmode]{simpleresumecv}
+% Class options:
+% a4paper, letterpaper, nonstopmode, draftmode
+% MMMyyyy, ddMMMyyyy, MMMMyyyy, ddMMMMyyyy, yyyyMMdd, yyyyMM, yyyy
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PREAMBLE.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% CV Info (to be customized).
+\newcommand{\CVAuthor}{Joseph Voss}
+\newcommand{\CVTitle}{Joseph Voss' Resume}
+\newcommand{\CVNote}{Compiled on {\today}}
+\newcommand{\CVWebpage}{http://jvoss14.com}
+
+% PDF settings and properties.
+\hypersetup{
+pdftitle={\CVTitle},
+pdfauthor={\CVAuthor},
+pdfsubject={\CVWebpage},
+pdfcreator={XeLaTeX},
+pdfproducer={},
+pdfkeywords={},
+unicode=true,
+bookmarks=true,
+bookmarksopen=true,
+pdfstartview=FitH,
+pdfpagelayout=OneColumn,
+pdfpagemode=UseOutlines,
+hidelinks,
+breaklinks}
+
+% Shorthand.
+\newcommand{\Code}[1]{\mbox{\textbf{#1}}}
+\newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% ACTUAL DOCUMENT.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% TITLE BLOCK %
+%%%%%%%%%%%%%%%
+
+\Title{\CVAuthor}
+
+\begin{SubTitle}
+{5610 Abilene Trail, Austin, TX 78749, USA}
+\par
+\href{\CVWebpage}
+{\url{\CVWebpage}}
+\,\SubBulletSymbol\,
++1\,(512)\,517-0468
+\,\SubBulletSymbol\,
+\href{mailto:josephvoss14@gmail.com}
+{josephvoss14@gmail.com}
+
+\end{SubTitle}
+
+\begin{Body}
+
+%%%%%%%%%%%%%%%
+%% EDUCATION %%
+%%%%%%%%%%%%%%%
+
+\Section
+{Education}
+{Education}
+{PDF:Education}
+
+\Entry
+%\href{http://www.example.com/my-university}
+{\textbf{Bachelor of Science, Mechanical Engineering}},
+University of Texas at Austin
+\hfill
+\DatestampYMD{2014}{08}{25} --
+\DatestampYMD{2018}{05}{04}
+
+\Gap
+\begin{center}
+Related Courses
+\end{center}
+\Gap
+\begin{Detail}
+Advanced Mechatronics II, Parallel Computing, Programming and Engineering Computational Methods, Heat Transfer, Engineering Vibrations, Machine Elements, Material Engineering, Fluid Mechanics, Thermodynamics, Solids, Statics, Engineering Design and Graphics, Differential Equations, Matrices and Matrix Calculations, Engineer Statistics, Engineering Communication
+\end{Detail}
+
+\BigGap
+\Entry
+\href{http://www.example.com/my-college}
+{\textbf{Study Abroad}},
+IES Abroad: Vienna, Austria
+\hfill
+\DatestampYMD{2015}{05}{22} -- 
+\DatestampYMD{2015}{06}{22}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%% RESEARCH EXPERIENCE %%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Experience}
+{Experience}
+{PDF:Experience}
+
+\Entry
+\href{http://tacc.utexas.edu}
+{\textbf{Texas Advanced Computing Center}}
+
+\Gap
+\BulletItem
+Student Intern, High Performance Computing
+\hfill
+\DatestampYMD{2017}{07}{01} --
+\DatestampYMD{2017}{08}{25}
+\begin{Detail}
+\SubBulletItem
+Developed an automated HPC testing harness using Jenkins, PyTest, and CMake \newline
+that integrates seamlessly with SLURM
+\SubBulletItem
+Created a heatmap visualization using Bokeh, showing 
+degredation  and improvement \newline in system performance
+\SubBulletItem
+Submitted a research paper describing the test harness developed\newline
+to the HPC System Professionals Workshop at Supercomputing Conference 17.
+\end{Detail}
+
+\Gap
+\BulletItem
+Team Member, Student Cluster Competition
+\hfill
+\DatestampYMD{2016}{02}{20} --
+\DatestampYMD{2017}{03}{30}
+\begin{Detail}
+\SubBulletItem
+Designed, built and managed a cluster of high performance compute nodes
+\SubBulletItem
+Developed remote power monitoring system using SNMP, Graphite, and Grafana
+\SubBulletItem
+Learned how to use and profile several HPC applications%: namely Linpack, HPCG, Paraview, and Hashcat
+\SubBulletItem
+Attended Supercomputing Conference 2016 to compete with student teams from around \newline 
+the world, placed 4\textsuperscript{th} overall
+\SubBulletItem
+Published a reproducibility study to the Parallel Computing journal.
+\end{Detail}
+
+\BigGap
+
+\Entry
+\href{http://tridentresearch.com/}
+{\textbf{Trident Research LLC}}
+
+\Gap
+\BulletItem
+Mechanical Engineer Intern
+\hfill
+\DatestampYMD{2016}{06}{25} --
+\DatestampYMD{2016}{08}{14}
+\begin{Detail}
+\SubBulletItem
+Designed and assembled charging system for naval buoys
+\SubBulletItem
+Created drawings and 3D models in Solidworks of custom parts
+\SubBulletItem
+Wrote embedded firmware for safe charging of buoys
+\SubBulletItem
+Completed acceptance testing for both custom and COTS parts
+\SubBulletItem
+Wrote and updated documentation of the naval buoy system
+\end{Detail}
+
+\BigGap
+
+\Entry
+\href{http://arlut.utexas.edu}
+{\textbf{Applied Research Laboratory}}
+
+\Gap
+\BulletItem
+Student Technician, Space and Geophysics Lab
+\hfill
+\DatestampYMD{2015}{07}{15} --
+\DatestampYMD{2015}{08}{20}
+\begin{Detail}
+\SubBulletItem
+Redesigned the method of reading/writing out RINEX files to use the OOP principle of \newline encapsulation
+\SubBulletItem
+Updated the in-house code base to use the new RINEX objects for file I/O
+\SubBulletItem
+Extensive cataloging of the applications within the in-house code-base
+\end{Detail}
+
+\Gap
+\BulletItem
+Student Technician, Space and Geophysics Lab
+\hfill
+\DatestampYMD{2015}{01}{16} --
+\DatestampYMD{2015}{05}{05}
+\begin{Detail}
+\SubBulletItem
+Created a suite of cross-compatible unit tests in C++
+\SubBulletItem
+Helped develop in-house testing framework
+\SubBulletItem
+Wrote documentation for how later unit testing should be executed
+\end{Detail}
+
+\Gap
+\BulletItem
+Science and Engineering Apprentice, Space and Geophysics Lab
+\hfill
+\DatestampYMD{2014}{05}{20} --
+\DatestampYMD{2014}{08}{04}
+\begin{Detail}
+\SubBulletItem
+Developed an inexpensive COTS GPS data collection platform using Python
+\SubBulletItem
+Wrote software capable of decoding binary streams, translating them to the floating point \newline
+representation, and writing out to formatted RINEX file
+\SubBulletItem
+Interfaced with GPS receiver mounted on a DIP via serial communication
+\end{Detail}
+
+
+%%%%%%%%%%%%
+%% SKILLS %%
+%%%%%%%%%%%%
+
+\Section
+{Skills}
+{Skills}
+{PDF:Skills}
+
+\Entry
+Solidworks,
+C++, 
+Python, 
+Git, 
+Bash,
+CMake,
+Jenkins,
+Linux management \& development, 
+Soldering,
+MATLAB,
+\LaTeX,
+Microsoft Word,
+Microsoft Excel,
+Basic machining and assembly experience.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PROFESSIONAL AFFILIATIONS & ACTIVITIES %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Professional Affiliations}
+{Professional Affiliations}
+{PDF:ProfessionalAffiliations}
+
+\Entry
+Terry Foundation Scholar
+\hfill
+\DatestampY{2014}--
+Current
+
+\Entry
+Eagle Scout, Troop 3
+\hfill
+\DatestampY{2012}
+
+\Entry
+Presidential Achievement Scholar
+\hfill
+\DatestampY{2014}--
+Current
+
+\Entry
+Member, Programmers in Science and Engineering
+\hfill
+\DatestampY{2016}--
+Current
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% PROFESSIONAL AFFILIATIONS & ACTIVITIES %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Section
+{Publications}
+{Publications}
+{PDF:Publications}
+
+\Entry
+\href{https://doi.org/10.1016/j.parco.2017.07.002}
+Ababao, R., Garcia, J. A., \underline{Voss, J.}, Proctor, W. C., \& Evans, R. T. (2017). "Student Cluster Competition 2016 reproducibility challenge: Genomic partitioning with ParConnect." \textit{Parallel Computing.} https://doi.org/10.1016/j.parco.2017.07.002
+
+\end{Body}
+
+%%%%%%%%%%%
+% CV NOTE %
+%%%%%%%%%%%
+
+%\UseNoteFont%
+%\null\hfill%
+%[\textit{\CVNote}]
+
+\end{document}
