@@ -1,7 +1,7 @@
 My Resume
 =============
 
-Latex formatted resume using Zach Scrivena's Template, found [here](https://githubt.com/zachscrivena/simple-resume-cv/)
+Latex formatted resume using Zach Scrivena's Template, found [here](https://github.com/zachscrivena/simple-resume-cv/)
 
 ## Overview
 
