@@ -133,9 +133,10 @@ nohead]{geometry}
 
 % XeLaTeX packages.
 \RequirePackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
-\RequirePackage{xunicode}
-\RequirePackage{xltxtra}
+%\RequirePackage{fontenc}
+%\defaultfontfeatures{Ligatures=TeX}
+%\RequirePackage{xunicode}
+%\RequirePackage{xltxtra}
 
 % Font: Use "Tinos" as the main typeface (\textnormal{}, \normalfont).
 % The "Tinos" fonts are released under the Apache License Version 2.0,
