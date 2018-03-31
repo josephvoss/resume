@@ -133,6 +133,7 @@ nohead]{geometry}
 
 % XeLaTeX packages.
 \RequirePackage{fontspec}
+%\RequirePackage{lua4ht}
 %\RequirePackage{fontenc}
 %\defaultfontfeatures{Ligatures=TeX}
 %\RequirePackage{xunicode}
