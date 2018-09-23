@@ -78,6 +78,7 @@ breaklinks}
 %%%%%%%%%%%%%%%
 %% EDUCATION %%
 %%%%%%%%%%%%%%%
+\BigGap
 
 \Section
 {Education}
@@ -92,23 +93,6 @@ University of Texas at Austin
 \DatestampYMD{2014}{08}{25} --
 \DatestampYMD{2018}{05}{04}
 
-\Gap
-\begin{Detail}
-Related Courses:
-Advanced Mechatronics II, Parallel Computing, Programming and Engineering
-    Computational Methods, Machine Tool Operation, Engineering Vibrations
-% Advanced Mechatronics II, Parallel Computing, Programming and Engineering Computational Methods, Heat Transfer, Engineering Vibrations, Machine Elements, Material Engineering, Fluid Mechanics, Thermodynamics, Solids, Statics, Engineering Design and Graphics, Differential Equations, Matrices and Matrix Calculations, Engineer Statistics, Engineering Communication
-\end{Detail}
-
-\BigGap
-\Entry
-\href{http://sites.utexas.edu/studyabroad/self-discovery-in-austria/}
-{\textbf{Study Abroad}},
-IES Abroad: Vienna, Austria
-\hfill
-\DatestampYMD{2015}{05}{22} -- 
-\DatestampYMD{2015}{06}{22}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%
 %% RESEARCH EXPERIENCE %%
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -117,24 +101,44 @@ IES Abroad: Vienna, Austria
 {Experience}
 {Experience}
 {PDF:Experience}
+\Entry
 
+\href{http://teksystems.com}
+{\textbf{Systems Administrator, TeKSystems}
+  \hfill \DatestampYMD{2018}{06}{05} -- Present}
+\Gap
+\begin{Detail}
+\BulletItem
+Subcontractor at Oak Ridge National Laboratory in the High-Performance \newline
+  Computing Operations group
+\BulletItem
+Used Puppet to configure and manage large scale systems
+\BulletItem
+Developed and deployed system health monitoring tools using Golang and Openshift
+\BulletItem
+Expanded performance monitoring tool to compare current results to \newline
+  historical data
+
+\end{Detail}
+
+\BigGap 
 \Entry
 \href{http://multimechanics.com}
-{\textbf{MultiMechanics}}
+{\textbf{DevOps Engineer, MultiMechanics}
+  \hfill
+  \DatestampYMD{2018}{01}{21} --
+  \DatestampYMD{2018}{05}{18} }
 \Gap
-\BulletItem
-DevOps Engineer
-\hfill
-\DatestampYMD{2018}{01}{21} --
-Present
 \begin{Detail}
-\SubBulletItem
-Focused on making their software tools cross-platform and able to be build on
-    Redhat \newline and SUSE systems
-\SubBulletItem
+\BulletItem
+Focused on making software tools cross-platform and able to be build on \newline
+  Redhat and SUSE systems
+\BulletItem
+Created automated build system using Vagrant
+\BulletItem
 Configured and installed pbs-pro job scheduler to better share computing
-    resources. \newline Lead training on it's usage
-\SubBulletItem
+    \newline resources. Lead training on it's usage
+\BulletItem
 Worked on simplifying and stream-lining developer workflow
 \end{Detail}
 
@@ -152,16 +156,14 @@ Student Intern, High Performance Computing
 \DatestampYMD{2017}{08}{25}
 \begin{Detail}
 \SubBulletItem
-Developed an automated HPC testing harness using Jenkins, PyTest, and CMake \newline
-that integrates seamlessly with SLURM
+Developed an automated HPC testing harness using Jenkins, PyTest, and \newline
+  CMake that integrates seamlessly with SLURM
 \SubBulletItem
-Created a heatmap visualization using Bokeh, showing historical degredation and \newline 
-improvement in system performance
+Created a heatmap visualization showing historical degradation \newline
+  and improvement in system performance
 \SubBulletItem
-Wrote and presented a research paper describing the test harness developed 
-\newline at the HPC System Professionals Workshop at Supercomputing Conference 17
-\SubBulletItem
-Led several workshops describing the usage of the testing harness
+Wrote and presented a research paper describing the test harness developed at
+  \newline the HPC System Professionals Workshop at Supercomputing Conference 17
 \end{Detail}
 
 \Gap
@@ -174,12 +176,13 @@ Team Member, Student Cluster Competition
 \SubBulletItem
 Designed, built and managed a cluster of high performance compute nodes
 \SubBulletItem
-Developed remote power monitoring system using SNMP, Graphite, and Grafana
+Developed remote power monitoring system using SNMP, Graphite, \newline and
+  Grafana
 \SubBulletItem
-Learned how to use and profile several HPC applications%: namely Linpack, HPCG, Paraview, and Hashcat
+Learned how to use and profile several HPC applications
 \SubBulletItem
-Attended Supercomputing Conference 2016 to compete with student teams from around \newline 
-the world, placed 4\textsuperscript{th} overall
+Attended Supercomputing Conference 2016 to compete with student teams \newline
+  from around the world, placed 4\textsuperscript{th} overall
 \SubBulletItem
 Published a reproducibility study to the Parallel Computing journal.
 \end{Detail}
@@ -187,65 +190,20 @@ Published a reproducibility study to the Parallel Computing journal.
 \BigGap
 
 \Entry
-\href{http://tridentresearch.com/}
-{\textbf{Trident Research LLC}}
-
-\Gap
-\BulletItem
-Mechanical Engineer Intern
-\hfill
-\DatestampYMD{2016}{06}{25} --
-\DatestampYMD{2016}{08}{14}
-\begin{Detail}
-\SubBulletItem
-Designed and assembled charging system for naval buoys
-\SubBulletItem
-Created drawings and 3D models in Solidworks of custom parts
-\SubBulletItem
-Wrote embedded firmware for safe charging of buoys
-\SubBulletItem
-Completed acceptance testing for both custom and COTS parts
-\SubBulletItem
-Wrote and updated documentation of the naval buoy system
-\end{Detail}
-
-\BigGap
-
-\Entry
 \href{http://arlut.utexas.edu}
-{\textbf{Applied Research Laboratory}}
-
-\Gap
-\BulletItem
-Student Technician, Space and Geophysics Lab
-\hfill
-\DatestampYMD{2015}{01}{16} --
-\DatestampYMD{2015}{08}{26}
+{\textbf{Science and Engineering Apprentice, Applied Research Laboratory}
+  \hfill
+  \DatestampYMD{2014}{05}{20} --
+  \DatestampYMD{2015}{08}{26}}
 \begin{Detail}
-\SubBulletItem
+\BulletItem
 Created a suite of cross-compatible unit tests in C++ for open source software
-\SubBulletItem
-Developed testing framework based off CMake/CDash/CTest suite
-\SubBulletItem
-Redesigned the method of reading/writing out RINEX files to use OOP encapsulation
-\SubBulletItem
-Updated the in-house code base to use the new RINEX objects for file I/O
-\end{Detail}
-
-\Gap
 \BulletItem
-Science and Engineering Apprentice, Space and Geophysics Lab
-\hfill
-\DatestampYMD{2014}{05}{20} --
-\DatestampYMD{2014}{08}{04}
-\begin{Detail}
-\SubBulletItem
-Developed an inexpensive COTS GPS data collection platform using Python
-\SubBulletItem
-Wrote software capable of decoding binary streams, translating to the floating point \newline
-representation, and writing out to formatted RINEX file
-\SubBulletItem
-Interfaced with GPS receiver mounted on a DIP via serial communication
+Redesigned the method of reading/writing out RINEX files to use OOP \newline
+  encapsulation
+\BulletItem
+Developed an inexpensive COTS GPS data collection platform using \newline
+  Python; decodes binary streams and writes out to a formatted RINEX file
 \end{Detail}
 
 
@@ -259,21 +217,16 @@ Interfaced with GPS receiver mounted on a DIP via serial communication
 {PDF:Skills}
 
 \Entry
-Solidworks,
-C++, 
 Python, 
-Git, 
+Puppet,
+Golang,
+Openshift,
 Bash,
-LabVIEW,
-CMake,
+Git, 
+C++, 
 Jenkins,
 Linux management \& development, 
-Soldering,
-MATLAB,
-\LaTeX,
-Microsoft Word,
-Microsoft Excel,
-Basic machining and assembly experience.
+\LaTeX
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Publications %%

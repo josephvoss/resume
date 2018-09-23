@@ -174,14 +174,14 @@ BoldItalicFont=FreeSerifBoldItalic]
 % Font styles.
 \newcommand{\UseHeadingFont}{\normalfont}
 \newcommand{\UseHeaderFooterFont}{\UseHeadingFont\fontsize{10pt}{10pt}\selectfont}
-\newcommand{\UseNoteFont}{\UseHeadingFont\fontsize{10pt}{10.8pt}\selectfont}
+\newcommand{\UseNoteFont}{\UseHeadingFont\fontsize{11pt}{10.8pt}\selectfont}
 %\newcommand{\UseTitleFont}{\UseHeadingFont\fontsize{28pt}{33.6pt}\selectfont\bfseries}
 %\newcommand{\UseSubTitleFont}{\normalfont\fontsize{8.6pt}{10.3pt}\selectfont}
-\newcommand{\UseTitleFont}{\UseHeadingFont\fontsize{16pt}{20pt}\selectfont\bfseries}
-\newcommand{\UseSubTitleFont}{\normalfont\fontsize{10pt}{12.3pt}\selectfont}
-\newcommand{\UseSectionFont}{\UseHeadingFont\fontsize{10pt}{11pt}\selectfont\bfseries}
-\newcommand{\UseSubSectionFont}{\UseHeadingFont\fontsize{10pt}{10.8pt}\selectfont\bfseries}
-\newcommand{\UseDetailFont}{\normalfont\fontsize{10pt}{10.8pt}\selectfont}
+\newcommand{\UseTitleFont}{\UseHeadingFont\fontsize{16pt}{24pt}\selectfont\bfseries}
+\newcommand{\UseSubTitleFont}{\normalfont\fontsize{11pt}{13pt}\selectfont}
+\newcommand{\UseSectionFont}{\UseHeadingFont\fontsize{11pt}{13pt}\selectfont\bfseries}
+\newcommand{\UseSubSectionFont}{\UseHeadingFont\fontsize{11pt}{13pt}\selectfont\bfseries}
+\newcommand{\UseDetailFont}{\normalfont\fontsize{11pt}{13pt}\selectfont}
 
 % Symbols (unicode).
 \newcommand{\BulletSymbol}{{\normalfont\fontsize{6.5}{7.8}\selectfont\raisebox{0.17em}{\char"25A0}}}
@@ -330,6 +330,7 @@ BoldItalicFont=FreeSerifBoldItalic]
 \parshape 1%
 \labelwidth \linewidth%
 \ignorespaces%
+\UseDetailFont
 }
 
 % Macro: Item (aligns horizontally with BulletItem).
