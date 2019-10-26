@@ -1,0 +1,174 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Thanks : Rishi Shah 's Contribution
+% inspired by his awesome contribution:
+% https://www.overleaf.com/articles/rishi-shahs-resume/vgxvkmxktyxn
+% Author : Allianzcortex
+% contact me : github.com/Allianzcortex
+% email : iamwanghz#gmail.com
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.40in,top=0.3in,right=0.75in,bottom=0.1in]{geometry} % Document margins
+\usepackage{fontawesome}
+\usepackage{times}
+\usepackage{hyperref}
+\hypersetup{breaklinks=true}
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Joseph Voss} % Your name 
+\address{ \href{http://josephvoss.com}{http://josephvoss.com} - jvoss@josephvoss.com - (512) 517-0648 }
+%\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
+%\address{\faGithub{ github.com/harrypotter} \faLink{ harrypotter.me} \faEnvelope{ harrypotter@gmail.com}}
+
+\begin{document}
+%{\centerline {\em \textbf { Targeting a 4-month, full-time internship position from 2012.01-2012.05(delete it if needed) } } }
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+{\bf Bachelors of Science, Mechanical Engineering } \hfill { Aug 2014 - May 2018} 
+\\{ { The University of Texas at Austin}} 
+
+\end{rSection}
+
+%-----------------------------------------------------------------------------------------------
+%    Skills
+%-----------------------------------------------------------------------------------------------
+\begin{rSection}{Skills}
+
+Python, Puppet, Golang, Openshift, Bash, Git, C++, Jenkins, Linux management \& development, \LaTeX
+
+% \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+% Programming: \ & aaa,bbb,ccc,ddd,eee,fff,ggg,hhh \\
+% Software \& Tools: & {\textbf{Backend: }}qqqq,wwww,eeee,rrrr,tttt,yyyy,uuuu,iiii\\
+% & {\textbf{FrontEnd: }}aaaaa,bbbbb,eeee,cccc\\
+% & {\textbf{Others: }}uuuu,uyyy,oooo,aaaa,vvv,eeee
+% \end{tabular}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Experience}
+
+\href{http://olcf.ornl.gov}
+{\textbf{HPC Systems Engineer, Oak Ridge National Laboratory}
+  \hfill {\em Jun 2018 -- Present}}
+  
+\\- Wrote custom tool to boot HPC machines from container images. Transitioned
+    several large scale systems to use it.
+\\- Created Helm charts and automated pipelines to move system services to
+    Kubernetes
+\\- Developed CI pipeline to stage Puppet changes on bare metal servers
+\\- Reviewed proposals for new HPC Systems. Assisted in their provisioning and
+    deployment.
+\\- Extended Let's Encrypt Golang projects to create in-house certificate issuer for
+    host authentication bootstrapping
+\\- Managed 500 node HPC post processing cluster in transition to Slurm and GPFS
+\\- Used Puppet to configure and manage large scale systems
+\\- Contributed to open source projects to extend features needed to simplify our
+    configuration
+\\- TLDR; Leveraged Puppet, Golang, Python, and Kubernetes to
+    simplify management of HPC systems
+
+\href{http://multimechanics.com}
+{\textbf{DevOps Engineer, MultiMechanics}
+  \hfill
+  { \em Jan 2018 -- May 2018 }}
+  
+\\- Created automated build system using Vagrant. Converting software tools from
+    Windows to Redhat and SUSE
+\\- Configured and installed pbs-pro job scheduler to better share computing
+    resources. Lead training on it's usage.
+
+\href{http://tacc.utexas.edu}
+{\textbf{Student Intern, Texas Advanced Computing Center}}\hfill{\em Feb 2016-- Aug 2017}
+
+\\- Developed an automated HPC testing harness using Jenkins, PyTest, and CMake that
+    integrates with Slurm
+\\- Created a heatmap visualization showing historical degradation and improvement in system performance
+\\- Designed, built and managed a cluster of high performance compute nodes for the Student
+    Cluster Competition
+\\- Developed remote power monitoring system using SNMP, Graphite, and Grafana
+\\- Attended Supercomputing Conference 2016 to compete with student teams from around the
+    world, placed 4\textsuperscript{th} overall
+
+\href{http://arlut.utexas.edu}
+{\textbf{Science and Engineering Apprentice, Applied Research Laboratory}
+  \hfill{\em May 2014 -- Aug 2015}}
+\\- Created a suite of cross-compatible unit tests in C++ for open source software
+\\- Redesigned the method of reading/writing out RINEX files to use OOP encapsulation
+\\- Developed an inexpensive COTS GPS data collection platform using Python; decodes binary streams and writes out to a formatted RINEX file
+
+\end{rSection}
+
+%-----------------------------------------------------------------------------------------------
+%    Publications
+%-----------------------------------------------------------------------------------------------
+\begin{rSection}{Publications}
+
+\href{http://doi.acm.org/10.1145/3155105.3155106}
+{\underline{Voss, J.}, Garcia, J. A., Proctor, W. C., \& Evans, R. T.
+(2017). ``Automated System Health and Performance Benchmarking Platform."
+In \textit{Supercomputing Conference '17: Proceedings of the 2nd international
+HPC System Professionals Workshop at SC'17}. New York, NY, USA: ACM.
+https://doi.acm.org/10.1145/3155105.3155106}
+
+\href{https://doi.org/10.1016/j.parco.2017.07.002}
+{Ababao, R., Garcia, J. A., \underline{Voss, J.}, Proctor, W. C., \& Evans, R.
+T. (2017). ``Student Cluster \linebreak Competition 2016 reproducibility challenge: Genomic
+partitioning with ParConnect." \textit{Parallel Computing.} \linebreak https://doi.org/10.1016/j.parco.2017.07.002}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	Awards
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Achievements} \itemsep -3pt
+%\item Presidential Achievement Scholar\hfill{ \em Aug 2014 }
+%\item Terry Foundatation Scholar\hfill{ \em Aug 2014 }
+%\item Member, Programmers in Science and Engineering\hfill{ \em Aug 2016 -- May 2018}
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+% \begin{rSection}{Academic Achievements} 
+%  Runners up in B.G.Shirke Vidyarthi Competition for Innovative Project organized by Pune Construction Engineering Research Foundation in January 2018
+% \item Won First Prize in Model Making Competition Organized by Symbiosis Institute of Technology, Pune.
+% \end{rSection}
+
+% \newpage
+
+% \end{rSection}
+
+% \begin{rSection}{Personal Traits}
+% \item Highly motivated and eager to learn new things.
+% \item Strong motivational and leadership skills.
+% \item Ability to work as an individual as well as in group.
+% \end{rSection}
+\end{document}
