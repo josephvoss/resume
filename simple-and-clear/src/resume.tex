@@ -34,7 +34,7 @@
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \name{Joseph Voss} % Your name 
-\address{ \href{http://josephvoss.com}{http://josephvoss.com} - jvoss@josephvoss.com - (512) 517-0648 }
+\address{ \href{https://josephvoss.com}{https://josephvoss.com} - jvoss@josephvoss.com - (512) 517-0648 }
 %\address{123 Pleasant Lane \\ City, State 12345} % Your secondary addess (optional)
 %\address{\faGithub{ github.com/harrypotter} \faLink{ harrypotter.me} \faEnvelope{ harrypotter@gmail.com}}
 
@@ -56,7 +56,8 @@
 %-----------------------------------------------------------------------------------------------
 \begin{rSection}{Skills}
 
-Python, Puppet, Golang, Openshift, Bash, Git, C++, Jenkins, Linux management \& development, \LaTeX
+Python, Puppet, Golang, Kubernetes, Slurm, Bash, Git, eBPF, C++, Performance
+  Tuning, GPFS, Lustre
 
 % \begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
 % Programming: \ & aaa,bbb,ccc,ddd,eee,fff,ggg,hhh \\
@@ -76,6 +77,8 @@ Python, Puppet, Golang, Openshift, Bash, Git, C++, Jenkins, Linux management \& 
 {\textbf{HPC Systems Engineer, Oak Ridge National Laboratory}
   \hfill {\em Jun 2018 -- Present}}
   
+\\- Provisioned Andes, new 700 node HPC cluster. Largest commodity cluster
+    procured by ORNL to date.
 \\- Wrote custom tool to boot HPC machines from container images. Transitioned
     several large scale systems to use it.
 \\- Developed eBPF wrapper to compile and load Linux kernel profiling programs and
@@ -87,11 +90,12 @@ Python, Puppet, Golang, Openshift, Bash, Git, C++, Jenkins, Linux management \& 
     deployment.
 \\- Extended Let's Encrypt Golang projects to create in-house certificate issuer for
     host authentication bootstrapping.
-\\- Managed 500 node HPC post processing cluster in transition to Slurm and GPFS.
 \\- Used Puppet to configure and manage large scale systems.
 \\- Contributed to open source projects to improve system health and monitoring.
-\\- TLDR; Leveraged Puppet, Golang, Python, and Kubernetes to
-    simplify management of HPC systems
+    Used to create load-balanced and always available data transfer cluster.
+\\- Helped lead a team of student interns in the `19 Student Cluster Competition
+\\- TLDR; Leveraged Puppet, Golang, Python, and Kubernetes to simplify
+    management of HPC systems
 
 \href{http://multimechanics.com}
 {\textbf{DevOps Engineer, MultiMechanics}
@@ -100,8 +104,6 @@ Python, Puppet, Golang, Openshift, Bash, Git, C++, Jenkins, Linux management \& 
   
 \\- Created automated build system using Vagrant. Converting software tools from
     Windows to Redhat and SUSE
-\\- Configured and installed pbs-pro job scheduler to better share computing
-    resources. Lead training on it's usage.
 
 \href{http://tacc.utexas.edu}
 {\textbf{Student Intern, Texas Advanced Computing Center}}\hfill{\em Feb 2016-- Aug 2017}
@@ -129,6 +131,13 @@ Python, Puppet, Golang, Openshift, Bash, Git, C++, Jenkins, Linux management \& 
 %-----------------------------------------------------------------------------------------------
 \begin{rSection}{Publications}
 
+\href{https://sc20.supercomputing.org/proceedings/sotp/sotp_pages/sotp107.html}
+{\underline{Voss, J.} (2020). ``Anchor: Diskless Cluster Provisioning Using
+Container Tools."
+Presented at \textit{SC '20: International Conference for High Performance Computing,
+Networking, Storage and Analysis}. Atlanta, GA, USA. \linebreak
+https://sc20.supercomputing.org/proceedings/sotp/sotp_pages/sotp107.html}
+
 \href{http://doi.acm.org/10.1145/3155105.3155106}
 {\underline{Voss, J.}, Garcia, J. A., Proctor, W. C., \& Evans, R. T.
 (2017). ``Automated System Health and Performance Benchmarking Platform."
@@ -142,6 +151,21 @@ T. (2017). ``Student Cluster \linebreak Competition 2016 reproducibility challen
 partitioning with ParConnect." \textit{Parallel Computing.} \linebreak https://doi.org/10.1016/j.parco.2017.07.002}
 
 \end{rSection}
+
+%---
+% Projects
+%---
+%\begin{rSection}{Open-source Projects}
+%
+%\href{https://github.com/olcf/greggd}
+%  {Greggd}: Daemon to compile/load eBPF programs into the kernel and forward output
+%to monitoring stack. https://github.com/olcf/greggd
+%
+%\href{https://github.com/olcf/anchor}
+%  {Anchor}: Dracut module to enable diskless booting using squashfs and overlayfs
+%https://github.com/olcf/anchor
+%
+%\end{rSection}
 
 %----------------------------------------------------------------------------------------
 %	Awards
