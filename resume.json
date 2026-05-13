@@ -49,7 +49,7 @@
         "Implemented Redfish-over-management-switch IPMI operations enabling power cycling of offline servers from chat commands, eliminating the need for manual hands-on intervention in offline colos.",
         "Built a just-in-time access system for edge jumphosts providing temporary, audited access grants with automatic expiration. Extended to support FedRAMP High colos via dedicated GCP jumphosts with firewall enforcement.",
         "Extended automated server reboots to a partnership fleet without anycast infrastructure, building custom traffic management tooling to safely drain datacenters for reboots.",
-        "Led end-to-end migration of the Salt CI pipeline from TeamCity to GitLab CI. Reduced CI runtime, standardied dependency management, and shipped complementary tooling.",
+        "Led end-to-end migration of the Salt CI pipeline from TeamCity to GitLab CI. Reduced CI runtime, standardized dependency management, and shipped complementary tooling.",
         "Designed and delivered a self-service lab metal reservation portal, replacing a static document with automated lifecycle management including time-based expiration and automatic cleanup.",
         "Authored RFC and drove implementation of upstream Debian repository snapshotting, hardening the fleet’s apt supply chain with staged, health-mediated rollout instead of direct upstream pulls."
       ]

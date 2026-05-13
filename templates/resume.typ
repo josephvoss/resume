@@ -12,6 +12,7 @@
 
 #let include-publications = variant.at("include", default: (:)).at("publications", default: true)
 #let include-location     = variant.at("include", default: (:)).at("location",     default: true)
+#let include-projects     = variant.at("include", default: (:)).at("projects",     default: true)
 #let work-limit           = variant.at("include", default: (:)).at("work_limit",   default: 999)
 
 #let fmt-date(d) = {
@@ -93,6 +94,11 @@
     [*#job.position* \ #job.name],
     [#date-range(job.startDate, job.at("endDate", default: none))],
   )
+  #let summary = job.at("summary", default: none)
+  #if summary != none [
+    #v(0.1em)
+    #emph[#summary]
+  ]
   #v(0.2em)
   #for h in job.highlights [
     - #h
@@ -106,6 +112,32 @@
 
 #for s in data.skills [
   #text(weight: "bold")[#s.name:] #s.keywords.join(" · ") \
+]
+
+// ── projects ─────────────────────────────────────────────────────────────────
+
+#if include-projects and "projects" in data [
+  #section("Projects")
+
+  #for proj in data.projects [
+    #let end = proj.at("endDate", default: none)
+    #grid(
+      columns: (1fr, auto),
+      [*#link(proj.url)[#proj.name]*],
+      [#date-range(proj.at("startDate", default: none), end)],
+    )
+    #let desc = proj.at("description", default: none)
+    #if desc != none [
+      #v(0.1em)
+      #emph[#desc]
+    ]
+    #v(0.2em)
+    #let highlights = proj.at("highlights", default: ())
+    #for h in highlights [
+      - #h
+    ]
+    #v(0.4em)
+  ]
 ]
 
 // ── publications ──────────────────────────────────────────────────────────────

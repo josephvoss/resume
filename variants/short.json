@@ -7,6 +7,7 @@
   "include": {
     "sections": ["education", "work", "skills"],
     "publications": false,
+    "projects": false,
     "location": false,
     "work_limit": 2
   }
