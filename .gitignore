@@ -1,3 +1,7 @@
+# build output
+output/
+
+# legacy LaTeX artifacts
 *.aux
 *.fls
 *.log

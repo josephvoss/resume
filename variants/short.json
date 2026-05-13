@@ -1,0 +1,13 @@
+{
+  "_comment": "Short one-page variant — drops publications, trims older jobs.",
+  "meta": {
+    "variant": "short",
+    "description": "Targeted one-pager. Drops publications and early internships."
+  },
+  "include": {
+    "sections": ["education", "work", "skills"],
+    "publications": false,
+    "location": false,
+    "work_limit": 2
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "version": "v1.0.0",
+    "lastModified": "2026-05-13"
+  },
+  "basics": {
+    "name": "Joseph Voss",
+    "label": "Systems Reliability Engineer",
+    "email": "jvoss@josephvoss.com",
+    "url": "https://josephvoss.com",
+    "summary": "Systems reliability engineer with a background in mechanical engineering and high performance computing.",
+    "location": {
+      "city": "Austin",
+      "region": "TX",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "josephvoss",
+        "url": "https://github.com/josephvoss"
+      }
+    ]
+  },
+  "education": [
+    {
+      "institution": "University of Texas at Austin",
+      "url": "https://utexas.edu",
+      "area": "Mechanical Engineering",
+      "studyType": "Bachelor of Science",
+      "startDate": "2014-08",
+      "endDate": "2018-05"
+    }
+  ],
+  "work": [
+    {
+      "name": "Cloudflare",
+      "location": "Austin, TX",
+      "position": "Systems Reliability Engineer",
+      "url": "https://cloudflare.com",
+      "startDate": "2021-08",
+      "summary": "SRE on the Edge Infrastructure team, owning reliability and automation for Cloudflare's global edge network of 310+ colos.",
+      "highlights": [
+        "Rotated through operational oncall covering 310+ edge colos globally, coordinating cross-team incident response for customer-impacting events.",
+        "Led incident response and authored post-mortems for several high-severity events. Participated in the fleet-wide CDN latency regression documented in a public Cloudflare blog post.",
+        "Designed and built an automated colo recovery system using Temporal workflows, orchestrating the full recovery sequence for offline/degraded edge colos. Contributed workflow activities for IPMI, Redfish, and switch configuration to the broader edge automation platform.",
+        "Designed and built an AI-powered operational memory system using sentence-transformer embeddings, a local vector database, and LLM-generated summaries to surface relevant alert context during oncall. Developed low-friction and feedback-driven institutional knowledge store for agents.",
+        "Implemented Redfish-over-management-switch IPMI operations enabling power cycling of offline servers from chat commands, eliminating the need for manual hands-on intervention in offline colos.",
+        "Built a just-in-time access system for edge jumphosts providing temporary, audited access grants with automatic expiration. Extended to support FedRAMP High colos via dedicated GCP jumphosts with firewall enforcement.",
+        "Extended automated server reboots to a partnership fleet without anycast infrastructure, building custom traffic management tooling to safely drain datacenters for reboots.",
+        "Led end-to-end migration of the Salt CI pipeline from TeamCity to GitLab CI. Reduced CI runtime, standardied dependency management, and shipped complementary tooling.",
+        "Designed and delivered a self-service lab metal reservation portal, replacing a static document with automated lifecycle management including time-based expiration and automatic cleanup.",
+        "Authored RFC and drove implementation of upstream Debian repository snapshotting, hardening the fleet’s apt supply chain with staged, health-mediated rollout instead of direct upstream pulls."
+      ]
+    },
+    {
+      "name": "Oak Ridge National Laboratory",
+      "location": "Oak Ridge, TN",
+      "position": "HPC Systems Engineer",
+      "url": "https://olcf.ornl.gov",
+      "startDate": "2018-06",
+      "endDate": "2021-08",
+      "summary": "Systems engineer at the Oak Ridge Leadership Computing Facility (OLCF), provisioning and operating large-scale HPC clusters including Summit and Andes.",
+      "highlights": [
+        "Provisioned Andes, new 700 node HPC cluster — largest commodity cluster procured by ORNL to date.",
+        "Wrote custom tool (Anchor) to boot HPC machines from container images. Transitioned several large-scale systems to use it.",
+        "Developed eBPF wrapper (greggd) to compile and load Linux kernel profiling programs and output data to Kafka.",
+        "Created Helm charts and automated pipelines to move system services to Kubernetes.",
+        "Developed CI pipeline to stage Puppet changes on bare metal servers.",
+        "Reviewed proposals for new HPC systems; assisted in their provisioning and deployment.",
+        "Extended Let's Encrypt Golang projects to create in-house certificate issuer for host authentication bootstrapping.",
+        "Used Puppet to configure and manage large-scale systems.",
+        "Contributed to open source projects to improve system health and monitoring; used to create load-balanced and highly available data transfer cluster.",
+        "Helped lead a team of student interns in the '19 Student Cluster Competition."
+      ]
+    },
+    {
+      "name": "MultiMechanics",
+      "location": "Austin, TX",
+      "position": "DevOps Engineer",
+      "url": "https://multimechanics.com",
+      "startDate": "2018-01",
+      "endDate": "2018-05",
+      "summary": "Short-term contract building automated cross-platform build infrastructure for simulation software.",
+      "highlights": [
+        "Created automated build system using Vagrant. Converted software tools from Windows to Redhat and SUSE environments.",
+        "Configured and installed PBS-Pro job scheduler to better share computing resources; led training on its usage."
+      ]
+    },
+    {
+      "name": "Texas Advanced Computing Center",
+      "location": "Austin, TX",
+      "position": "Student Intern, High Performance Computing",
+      "url": "https://tacc.utexas.edu",
+      "startDate": "2016-02",
+      "endDate": "2017-08",
+      "summary": "Student intern developing automated HPC testing and monitoring tooling, and competing in the SC16 Student Cluster Competition (4th place).",
+      "highlights": [
+        "Developed an automated HPC testing harness using Jenkins, PyTest, and CMake that integrates with Slurm.",
+        "Created a heatmap visualization showing historical degradation and improvement in system performance.",
+        "Designed, built and managed a cluster of high performance compute nodes for the Student Cluster Competition.",
+        "Developed remote power monitoring system using SNMP, Graphite, and Grafana.",
+        "Attended Supercomputing Conference 2016 to compete with student teams from around the world; placed 4th overall."
+      ]
+    },
+    {
+      "name": "Applied Research Laboratory, UT Austin",
+      "location": "Austin, TX",
+      "position": "Science and Engineering Apprentice",
+      "url": "https://arlut.utexas.edu",
+      "startDate": "2014-05",
+      "endDate": "2015-08",
+      "summary": "Undergraduate research apprentice developing GPS data collection and processing tools for navigation research.",
+      "highlights": [
+        "Created a suite of cross-compatible unit tests in C++ for open source software.",
+        "Redesigned the method of reading/writing RINEX files to use OOP encapsulation.",
+        "Developed an inexpensive COTS GPS data collection platform using Python; decodes binary streams and writes out to formatted RINEX files."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "Golang",
+        "Python",
+        "Rust",
+        "Bash",
+        "Typescript"
+      ]
+    },
+    {
+      "name": "Infrastructure & Configuration Management",
+      "keywords": [
+        "Saltstack",
+        "Puppet",
+        "Terraform",
+        "Kubernetes",
+        "Nomad",
+        "cdk8s / Helm",
+        "Debian / RHEL Linux",
+        "GCP",
+        "Cloudflare Workers"
+      ]
+    },
+    {
+      "name": "Observability, Reliability & Systems",
+      "keywords": [
+        "Prometheus",
+        "Grafana",
+        "PagerDuty",
+        "Consul",
+        "Vault",
+        "Temporal",
+        "Airflow",
+        "Redfish / IPMI",
+        "eBPF",
+        "Kafka"
+      ]
+    },
+    {
+      "name": "CI/CD & Developer Tooling",
+      "keywords": [
+        "GitLab CI",
+        "Jenkins",
+        "Git / Jujutsu"
+      ]
+    },
+    {
+      "name": "AI-Assisted Development & ML",
+      "keywords": [
+        "Opencode",
+        "Pi-coding-agent",
+        "RAG / Vector Databases",
+        "Sentence Transformers",
+        "LLM Orchestration"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "name": "Anchor: Diskless Cluster Provisioning Using Container Tools",
+      "publisher": "SC '20: International Conference for High Performance Computing, Networking, Storage and Analysis",
+      "releaseDate": "2020",
+      "url": "https://sc20.supercomputing.org/proceedings/sotp/sotp_pages/sotp107.html",
+      "authors": [
+        "Voss, J."
+      ],
+      "summary": "Presented at SC '20. Atlanta, GA, USA."
+    },
+    {
+      "name": "Automated System Health and Performance Benchmarking Platform",
+      "publisher": "Supercomputing Conference '17: Proceedings of the 2nd International HPC System Professionals Workshop at SC'17",
+      "releaseDate": "2017",
+      "url": "https://doi.acm.org/10.1145/3155105.3155106",
+      "authors": [
+        "Voss, J.",
+        "Garcia, J. A.",
+        "Proctor, W. C.",
+        "Evans, R. T."
+      ],
+      "summary": "ACM, New York, NY, USA."
+    },
+    {
+      "name": "Student Cluster Competition 2016 Reproducibility Challenge: Genomic Partitioning with ParConnect",
+      "publisher": "Parallel Computing",
+      "releaseDate": "2017",
+      "url": "https://doi.org/10.1016/j.parco.2017.07.002",
+      "authors": [
+        "Ababao, R.",
+        "Garcia, J. A.",
+        "Voss, J.",
+        "Proctor, W. C.",
+        "Evans, R. T."
+      ],
+      "summary": "Parallel Computing journal."
+    }
+  ],
+  "projects": [
+    {
+      "name": "Anchor",
+      "description": "Extensible initrd module to boot HPC clusters from immutable squashFS container images with a read-write overlay, replacing in-house provisioning scripts with container tooling.",
+      "highlights": [
+        "Published as a paper at SC '20: International Conference for High Performance Computing.",
+        "Deployed to production clusters at OLCF, replacing bespoke in-house provisioning scripts."
+      ],
+      "keywords": ["HPC", "Linux", "Containers", "Provisioning", "Golang"],
+      "startDate": "2019",
+      "endDate": "2021",
+      "url": "https://github.com/olcf/anchor",
+      "roles": ["Author"],
+      "entity": "Oak Ridge National Laboratory",
+      "type": "application"
+    },
+    {
+      "name": "greggd",
+      "description": "Golang daemon that compiles and loads eBPF programs into the Linux kernel and streams output to Kafka, enabling low-overhead internal kernel monitoring on HPC machines.",
+      "highlights": [
+        "Deployed to large-scale HPC systems at OLCF for production kernel observability."
+      ],
+      "keywords": ["eBPF", "Golang", "Kafka", "Linux", "Observability"],
+      "startDate": "2019",
+      "endDate": "2021",
+      "url": "https://github.com/olcf/greggd",
+      "roles": ["Author"],
+      "entity": "Oak Ridge National Laboratory",
+      "type": "application"
+    },
+    {
+      "name": "git-remote-s3",
+      "description": "Rust CLI tool implementing a Git remote helper that allows using an S3-compatible object store as a git remote repository.",
+      "highlights": [
+        "Implements the full Git remote helper protocol in Rust.",
+        "Supports push/pull/clone against S3-compatible backends (Backblaze B2, AWS S3, etc.)."
+      ],
+      "keywords": ["Rust", "Git", "S3", "CLI"],
+      "startDate": "2021",
+      "url": "https://github.com/josephvoss/git-remote-s3",
+      "roles": ["Author"],
+      "type": "application"
+    },
+    {
+      "name": "Cloudflare Workers Photo Gallery",
+      "description": "Self-hosted image gallery and Google Photos uploader running entirely on Cloudflare Workers, R2, KV, and Images — no compute server required.",
+      "highlights": [
+        "Gallery viewer built with Workers static assets, Fancybox, and Tailwind; thumbnails served via live Cloudflare Images transforms.",
+        "Google Photos picker integration for direct-to-R2 uploads using OAuth, KV-backed session state, and Cloudflare Access for auth."
+      ],
+      "keywords": ["Cloudflare Workers", "TypeScript", "R2", "KV", "Serverless"],
+      "startDate": "2025",
+      "url": "https://github.com/josephvoss/photo-gallery-worker",
+      "roles": ["Author"],
+      "type": "application"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Red Hat Certified Engineer (RHCE)",
+      "date": "2019-08-30",
+      "issuer": "Red Hat",
+      "url": "https://www.redhat.com/en/services/certification/rhce"
+    },
+    {
+      "name": "Red Hat Certified System Administrator (RHCSA)",
+      "date": "2019-08-30",
+      "issuer": "Red Hat",
+      "url": "https://www.redhat.com/en/services/certification/rhcsa"
+    }
+  ]
+}
