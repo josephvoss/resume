@@ -37,7 +37,7 @@
 
 #set page(
   paper: "us-letter",
-  margin: (top: 0.5in, bottom: 0.45in, left: 0.6in, right: 0.6in),
+  margin: (top: 0.25in, bottom: 0.25in, left: 0.5in, right: 0.5in),
 )
 
 #set text(font: "Times New Roman", size: 11pt)
@@ -45,12 +45,14 @@
 
 // ── section heading ───────────────────────────────────────────────────────────
 
-#let section(title) = {
-  v(0.6em)
-  text(weight: "bold", size: 11pt, upper(title))
-  line(length: 100%, stroke: 0.5pt)
-  v(0.2em)
-}
+#let section(title) = stack(
+  dir: ttb,
+  v(0.2em),
+  text(weight: "bold", size: 11pt, upper(title)),
+  v(0.25em),
+  line(length: 100%, stroke: 0.5pt),
+  v(0.1em),
+)
 
 // ── name / contact block ──────────────────────────────────────────────────────
 
@@ -60,15 +62,16 @@
 #if include-location {
   contact-items += (basics.location.city + ", " + basics.location.region,)
 }
-#{ contact-items += (basics.phone, basics.email) }
+#{ contact-items += (basics.email,) }
 
-#align(center)[
-  #text(size: 20pt, weight: "bold")[#basics.name]
-  #v(0.3em)
-  #text(size: 10pt)[
+#align(center, stack(
+  dir: ttb,
+  text(size: 20pt, weight: "bold")[#basics.name],
+  v(1.5em),
+  text(size: 10pt)[
     #contact-items.map(it => [#it]).join([#h(0.5em)•#h(0.5em)])
-  ]
-]
+  ],
+))
 
 // ── education ─────────────────────────────────────────────────────────────────
 

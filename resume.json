@@ -9,7 +9,7 @@
     "label": "Systems Reliability Engineer",
     "email": "jvoss@josephvoss.com",
     "url": "https://josephvoss.com",
-    "summary": "Systems reliability engineer with a background in mechanical engineering and high performance computing.",
+    "summary": "SRE with seven years operating large-scale bare-metal infrastructure, from first in class supercomputers to Cloudflare's global edge network. Drawn to the internals: how git objects are structured, how containers work, how eBPF programs hook the kernel, and leveraging that to build tools no one has gotten to yet.",
     "location": {
       "city": "Austin",
       "region": "TX",
@@ -42,16 +42,12 @@
       "startDate": "2021-08",
       "summary": "SRE on the Edge Infrastructure team, owning reliability and automation for Cloudflare's global edge network of 310+ colos.",
       "highlights": [
-        "Rotated through operational oncall covering 310+ edge colos globally, coordinating cross-team incident response for customer-impacting events.",
-        "Led incident response and authored post-mortems for several high-severity events. Participated in the fleet-wide CDN latency regression documented in a public Cloudflare blog post.",
-        "Designed and built an automated colo recovery system using Temporal workflows, orchestrating the full recovery sequence for offline/degraded edge colos. Contributed workflow activities for IPMI, Redfish, and switch configuration to the broader edge automation platform.",
-        "Designed and built an AI-powered operational memory system using sentence-transformer embeddings, a local vector database, and LLM-generated summaries to surface relevant alert context during oncall. Developed low-friction and feedback-driven institutional knowledge store for agents.",
-        "Implemented Redfish-over-management-switch IPMI operations enabling power cycling of offline servers from chat commands, eliminating the need for manual hands-on intervention in offline colos.",
-        "Built a just-in-time access system for edge jumphosts providing temporary, audited access grants with automatic expiration. Extended to support FedRAMP High colos via dedicated GCP jumphosts with firewall enforcement.",
-        "Extended automated server reboots to a partnership fleet without anycast infrastructure, building custom traffic management tooling to safely drain datacenters for reboots.",
+        "Rotated through operational oncall covering 310+ edge colos globally; led incident response and authored post-mortems for high-severity customer-impacting events.",
+        "Designed and built an automated colo recovery system using Temporal workflows, orchestrating the full recovery sequence for offline/degraded edge colos, including Redfish and IPMI power cycling from chat ops.",
+        "Built a just-in-time access system for edge jumphosts with temporary, audited access grants and automatic expiration. Extended to FedRAMP High colos via dedicated GCP jumphosts with firewall enforcement.",
+        "Designed and built an AI-powered operational memory system using sentence-transformer embeddings, a local vector database, and LLM-generated summaries to surface relevant alert context during oncall.",
         "Led end-to-end migration of the Salt CI pipeline from TeamCity to GitLab CI. Reduced CI runtime, standardized dependency management, and shipped complementary tooling.",
-        "Designed and delivered a self-service lab metal reservation portal, replacing a static document with automated lifecycle management including time-based expiration and automatic cleanup.",
-        "Authored RFC and drove implementation of upstream Debian repository snapshotting, hardening the fleet’s apt supply chain with staged, health-mediated rollout instead of direct upstream pulls."
+        "Authored RFC and drove implementation of upstream Debian repository snapshotting, hardening the fleet's apt supply chain with gpg validated packages progressively deployed following a staged health-mediated rollout instead of direct upstream pulls."
       ]
     },
     {
@@ -63,14 +59,13 @@
       "endDate": "2021-08",
       "summary": "Systems engineer at the Oak Ridge Leadership Computing Facility (OLCF), provisioning and operating large-scale HPC clusters including Summit and Andes.",
       "highlights": [
-        "Provisioned Andes, new 700 node HPC cluster — largest commodity cluster procured by ORNL to date.",
+        "Provisioned Andes, new 700 node HPC cluster - largest commodity cluster procured by ORNL to date.",
         "Wrote custom tool (Anchor) to boot HPC machines from container images. Transitioned several large-scale systems to use it.",
         "Developed eBPF wrapper (greggd) to compile and load Linux kernel profiling programs and output data to Kafka.",
         "Created Helm charts and automated pipelines to move system services to Kubernetes.",
         "Developed CI pipeline to stage Puppet changes on bare metal servers.",
         "Reviewed proposals for new HPC systems; assisted in their provisioning and deployment.",
         "Extended Let's Encrypt Golang projects to create in-house certificate issuer for host authentication bootstrapping.",
-        "Used Puppet to configure and manage large-scale systems.",
         "Contributed to open source projects to improve system health and monitoring; used to create load-balanced and highly available data transfer cluster.",
         "Helped lead a team of student interns in the '19 Student Cluster Competition."
       ]
@@ -137,7 +132,7 @@
         "Puppet",
         "Terraform",
         "Kubernetes",
-        "Nomad",
+        "NixOS",
         "cdk8s / Helm",
         "Debian / RHEL Linux",
         "GCP",
@@ -149,8 +144,8 @@
       "keywords": [
         "Prometheus",
         "Grafana",
-        "PagerDuty",
         "Consul",
+        "Nomad",
         "Vault",
         "Temporal",
         "Airflow",
@@ -262,7 +257,7 @@
     },
     {
       "name": "Cloudflare Workers Photo Gallery",
-      "description": "Self-hosted image gallery and Google Photos uploader running entirely on Cloudflare Workers, R2, KV, and Images — no compute server required.",
+      "description": "Self-hosted image gallery and Google Photos uploader running entirely on Cloudflare Workers, R2, KV, and Images - no compute server required.",
       "highlights": [
         "Gallery viewer built with Workers static assets, Fancybox, and Tailwind; thumbnails served via live Cloudflare Images transforms.",
         "Google Photos picker integration for direct-to-R2 uploads using OAuth, KV-backed session state, and Cloudflare Access for auth."
