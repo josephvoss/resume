@@ -1,11 +1,10 @@
 {
-  "_comment": "Full CV variant — all sections, all bullets, publications included.",
+  "_comment": "Full CV variant — all sections, all bullets, all projects, publications included.",
   "meta": {
     "variant": "full",
     "description": "Complete CV. No content omitted."
   },
   "include": {
-    "sections": ["education", "work", "skills", "publications"],
     "publications": true,
     "projects": true,
     "location": true

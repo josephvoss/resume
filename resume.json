@@ -62,12 +62,13 @@
         "Provisioned Andes, new 700 node HPC cluster - largest commodity cluster procured by ORNL to date.",
         "Wrote custom tool (Anchor) to boot HPC machines from container images. Transitioned several large-scale systems to use it.",
         "Developed eBPF wrapper (greggd) to compile and load Linux kernel profiling programs and output data to Kafka.",
+        "Extended Let's Encrypt Golang projects to create in-house certificate issuer for host authentication bootstrapping.",
+        "Contributed to open source projects to improve system health and monitoring; used to create load-balanced and highly available data transfer cluster.",
+        "Helped lead a team of student interns in the '19 Student Cluster Competition.",
         "Created Helm charts and automated pipelines to move system services to Kubernetes.",
         "Developed CI pipeline to stage Puppet changes on bare metal servers.",
         "Reviewed proposals for new HPC systems; assisted in their provisioning and deployment.",
-        "Extended Let's Encrypt Golang projects to create in-house certificate issuer for host authentication bootstrapping.",
-        "Contributed to open source projects to improve system health and monitoring; used to create load-balanced and highly available data transfer cluster.",
-        "Helped lead a team of student interns in the '19 Student Cluster Competition."
+        "Used Puppet to configure and manage large-scale systems."
       ]
     },
     {

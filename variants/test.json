@@ -1,0 +1,12 @@
+{
+  "include": {
+    "publications": false,
+    "location": false,
+    "work_limit": 2,
+    "work_highlights": {
+      "Cloudflare": [0, 1, 2, 3, 4],
+      "Oak Ridge National Laboratory": [0, 1, 2, 3, 4]
+    },
+    "projects": ["Anchor", "greggd", "git-remote-s3"]
+  }
+}

@@ -20,6 +20,10 @@ OUTDIR   := output
 TYPST    := typst
 JQ       := jq
 
+FONT_PATHS := --font-path /System/Library/Fonts \
+              --font-path /System/Library/Fonts/Supplemental \
+              --font-path $(HOME)/Library/Fonts
+
 # ── default ───────────────────────────────────────────────────────────────────
 
 .PHONY: all
@@ -38,7 +42,7 @@ $(OUTDIR)/resume-%.pdf: $(DATA) variants/%.json $(TEMPLATE) | $(OUTDIR)
 		--input data=../$(DATA) \
 		--input variant=../variants/$*.json \
 		--root . \
-		--font-path Fonts \
+		$(FONT_PATHS) \
 		$(TEMPLATE) \
 		$@
 

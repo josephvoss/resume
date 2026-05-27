@@ -1,14 +1,19 @@
 {
-  "_comment": "Short one-page variant — drops publications, trims older jobs.",
+  "_comment": "Short one-page variant — drops publications, trims older jobs and highlights.",
   "meta": {
     "variant": "short",
-    "description": "Targeted one-pager. Drops publications and early internships."
+    "description": "Targeted one-pager. Drops publications, early internships, and verbose bullets."
   },
   "include": {
-    "sections": ["education", "work", "skills"],
     "publications": false,
-    "projects": false,
     "location": false,
-    "work_limit": 2
+    "work_limit": 2,
+
+    "_comment_work_highlights": "Per-company index arrays select which highlights to show (0-based).",
+    "work_highlights": {
+      "Cloudflare": [0, 1, 2, 3, 4],
+      "Oak Ridge National Laboratory": [0, 1, 2, 3, 4]
+    },
+    "projects": []
   }
 }
