@@ -61,7 +61,7 @@
       "highlights": [
         "Provisioned Andes, new 700 node HPC cluster - largest commodity cluster procured by ORNL to date.",
         "Wrote custom tool (Anchor) to boot HPC machines from container images. Transitioned several large-scale systems to use it.",
-        "Developed eBPF wrapper (greggd) to compile and load Linux kernel profiling programs and output data to Kafka.",
+        "Developed eBPF wrapper (greggd) to compile and load Linux kernel profiling programs and stream data via Telegraf to Kafka.",
         "Extended Let's Encrypt Golang projects to create in-house certificate issuer for host authentication bootstrapping.",
         "Contributed to open source projects to improve system health and monitoring; used to create load-balanced and highly available data transfer cluster.",
         "Helped lead a team of student interns in the '19 Student Cluster Competition.",
@@ -147,9 +147,7 @@
         "Grafana",
         "Consul",
         "Nomad",
-        "Vault",
         "Temporal",
-        "Airflow",
         "Redfish / IPMI",
         "eBPF",
         "Kafka"
@@ -161,16 +159,6 @@
         "GitLab CI",
         "Jenkins",
         "Git / Jujutsu"
-      ]
-    },
-    {
-      "name": "AI-Assisted Development & ML",
-      "keywords": [
-        "Opencode",
-        "Pi-coding-agent",
-        "RAG / Vector Databases",
-        "Sentence Transformers",
-        "LLM Orchestration"
       ]
     }
   ],
@@ -218,8 +206,8 @@
       "name": "Anchor",
       "description": "Extensible initrd module to boot HPC clusters from immutable squashFS container images with a read-write overlay, replacing in-house provisioning scripts with container tooling.",
       "highlights": [
-        "Published as a paper at SC '20: International Conference for High Performance Computing.",
-        "Deployed to production clusters at OLCF, replacing bespoke in-house provisioning scripts."
+        "Designed as a dracut initrd module: fetches a squashfs image at boot, mounts it read-only with a tmpfs overlay, and uses ACME/Step-CA mutual-TLS certificate bootstrapping to authenticate nodes before image download.",
+        "Deployed to production clusters at OLCF; supported both serverless (Kubernetes) and local management-server provisioning modes."
       ],
       "keywords": ["HPC", "Linux", "Containers", "Provisioning", "Golang"],
       "startDate": "2019",
@@ -231,9 +219,9 @@
     },
     {
       "name": "greggd",
-      "description": "Golang daemon that compiles and loads eBPF programs into the Linux kernel and streams output to Kafka, enabling low-overhead internal kernel monitoring on HPC machines.",
+      "description": "Golang daemon that compiles and loads eBPF C programs into the Linux kernel at runtime using gobpf/bcc, attaches kprobes and perf output maps, binary-deserializes kernel structs via reflection, and streams structured data in InfluxDB line protocol to a local Unix socket.",
       "highlights": [
-        "Deployed to large-scale HPC systems at OLCF for production kernel observability."
+        "Deployed to large-scale HPC systems at OLCF; provided low-overhead kernel observability (file opens, exec, block I/O latency, TCP session lifetime) without modifying the kernel or rebooting nodes."
       ],
       "keywords": ["eBPF", "Golang", "Kafka", "Linux", "Observability"],
       "startDate": "2019",
