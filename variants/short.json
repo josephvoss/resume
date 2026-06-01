@@ -11,9 +11,9 @@
 
     "_comment_work_highlights": "Per-company index arrays select which highlights to show (0-based).",
     "work_highlights": {
-      "Cloudflare": [0, 1, 2, 3, 4],
+      "Cloudflare": [0, 1, 2, 3, 4, 5],
       "Oak Ridge National Laboratory": [0, 1, 2, 3, 4]
     },
-    "projects": []
+    "projects": ["Anchor", "greggd"]
   }
 }

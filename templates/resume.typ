@@ -51,17 +51,19 @@
 #let accent   = rgb("#1a202c")   // near-black — section headings
 #let fg       = rgb("#1a202c")   // near-black body text
 #let subtle   = rgb("#4a5568")   // muted grey for secondary labels
+#let link-col = rgb("#2b6cb0")   // link blue (matches old teal-ish)
 
 // ── page setup ────────────────────────────────────────────────────────────────
 
 #set page(
   paper: "us-letter",
-  margin: (top: 0.45in, bottom: 0.4in, left: 0.55in, right: 0.55in),
+  margin: (top: 0.45in, bottom: 0.4in, left: 0.65in, right: 0.65in),
 )
 
-#set text(font: "Baskerville", size: 10.5pt, fill: fg)
-#set par(leading: 0.65em, spacing: 0.65em)
-#set list(indent: 0.5em, body-indent: 0.4em, spacing: 0.45em)
+#set text(size: 10.5pt, fill: fg)
+#set par(leading: 0.6em, spacing: 0.6em)
+#set list(marker: "-", indent: 0em, body-indent: 0.5em, spacing: 0.4em)
+#show list.item: it => { set par(leading: 0.45em, spacing: 0em); it }
 
 // ── section heading ───────────────────────────────────────────────────────────
 
@@ -69,22 +71,26 @@
   v(0.5em)
   stack(
     dir: ttb,
-    text(weight: "bold", size: 9.5pt, fill: fg, tracking: 1.2pt, upper(title)),
+    text(weight: "bold", size: 10pt, fill: fg)[#upper(title)],
     v(0.2em),
-    line(length: 100%, stroke: 0.5pt + rgb("#a0aec0")),
+    line(length: 100%, stroke: 0.5pt + fg),
   )
-  v(0.1em)
+  v(0.15em)
 }
 
 // ── job / project entry header ────────────────────────────────────────────────
+// Single-row: "**Title, Company**" left, date right — matches old format.
 
 #let entry-header(left-top, left-sub, right-str) = grid(
   columns: (1fr, auto),
-  row-gutter: 0.9em,
-  align(left + bottom)[*#left-top*],
-  align(right + bottom)[#text(size: 9.5pt, fill: subtle)[#right-str]],
-  align(left)[#text(size: 9.5pt, fill: subtle)[#left-sub]],
-  [],
+  align(left + bottom)[
+    #if left-sub != "" [
+      *#left-top, #left-sub*
+    ] else [
+      *#left-top*
+    ]
+  ],
+  align(right + bottom)[#text(style: "italic")[#right-str]],
 )
 
 // ── date formatting ───────────────────────────────────────────────────────────
@@ -108,38 +114,24 @@
 }
 
 // ── name / contact header ──────────────────────────────────────────────────────
+// Centered name + centered contact line, matching the old format style.
 
 #{
   let basics = data.basics
-  let contact-sep = h(0.6em) + text(fill: subtle)[·] + h(0.6em)
+  let contact-sep = " - "
 
   let contact-items = ()
   if include-location {
-    contact-items += (text[#basics.location.city, #basics.location.region],)
+    contact-items += (basics.location.city + ", " + basics.location.region,)
   }
   contact-items += (link("mailto:" + basics.email)[#basics.email],)
   contact-items += (link(basics.url)[#basics.url],)
-  for p in basics.at("profiles", default: ()) {
-    if p.network == "GitHub" {
-      contact-items += (link(p.url)[GitHub: #p.username],)
-    }
-  }
 
-  grid(
-    columns: (1fr, auto),
-    align(left + bottom)[
-      #text(size: 24pt, weight: "bold", fill: fg)[#basics.name]
-    ],
-    align(right + bottom)[
-      #stack(
-        dir: ttb,
-        spacing: 0.3em,
-        align(right)[#text(size: 11pt, fill: subtle)[#basics.label]],
-        v(0.75em),
-        align(right)[#text(size: 9pt, fill: subtle)[#contact-items.join(contact-sep)]],
-      )
-    ],
-  )
+  align(center)[
+    #text(size: 20pt, weight: "bold")[#basics.name]
+    #v(0.1em)
+    #text(size: 10pt)[#contact-items.join(contact-sep)]
+  ]
 }
 
 // ── top-level summary ────────────────────────────────────────────────────────
@@ -147,9 +139,8 @@
 #{
   let summary = data.basics.at("summary", default: none)
   if include-summary and summary != none [
-    #v(0.75em)
-    #text(size: 10pt, fill: subtle)[#summary]
-    #v(0.1em)
+    #v(0.4em)
+    #text(size: 10pt)[#summary]
   ]
 }
 
@@ -158,12 +149,12 @@
 #section("Education")
 
 #for edu in data.education [
-  #entry-header(
-    edu.studyType + ", " + edu.area,
-    edu.institution,
-    date-range(edu.startDate, edu.at("endDate", default: none)),
+  #grid(
+    columns: (1fr, auto),
+    align(left + bottom)[#(edu.studyType + ", " + edu.area + ", " + edu.institution)],
+    align(right + bottom)[#text(style: "italic")[#date-range(edu.startDate, edu.at("endDate", default: none))]],
   )
-  #v(0.5em)
+  #v(0.3em)
 ]
 
 // ── experience ────────────────────────────────────────────────────────────────
@@ -192,14 +183,14 @@
     )
     #let summary = job.at("summary", default: none)
     #if summary != none [
-      #v(0.45em)
-      #text(size: 9pt, style: "italic", fill: subtle)[#summary]
+      #v(0.25em)
+      #text(size: 9.5pt, style: "italic")[#summary]
     ]
-    #v(0.4em)
+    #v(0.25em)
     #for h in highlights [
       - #parse-inline(h)
     ]
-    #v(0.55em)
+    #v(0.5em)
   ]
 }
 
@@ -207,8 +198,9 @@
 
 #section("Skills")
 
+#v(0.1em)
 #for s in data.skills [
-  #text(weight: "bold")[#s.name: ]#text(fill: subtle)[#s.keywords.join(" · ")] \
+  #text(weight: "bold")[#s.name: ]#s.keywords.join(", ") \
 ]
 
 // ── projects ──────────────────────────────────────────────────────────────────
